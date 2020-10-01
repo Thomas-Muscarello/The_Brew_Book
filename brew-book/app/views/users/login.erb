@@ -1,0 +1,16 @@
+<% if @errors %>
+<% @errors.each do |error| %>
+    <p style="color: red;"><%= error %></p>
+    <%end%>
+    <%end%>
+
+<h1> Please login in with your Username and Password </h1>
+<form action="/login" method="POST">
+    <input type="text" name="user[username]" value="<%=@user.username%>" placeholder="Your Username">
+    <input type="password" name="user[password]" value="" placeholder="Your Password">
+    <input type="Submit" value="Submit">
+    </form>
+<br>
+
+<h3> Not a user? signup below!</h3>
+    <a href="http://127.0.0.1:4200/signup">Sign Up</a>

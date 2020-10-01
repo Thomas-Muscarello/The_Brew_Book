@@ -1,0 +1,23 @@
+<div class="container">
+  <header><img src="images/the-brew-book-logo.png" class="img-responsive main-image"></header>
+    <div class="col-md-8 col-md-offset-2">
+      <h2>"The Brew Book" presented by Twisted History</h2>
+    
+      <%if !current_user%>
+        <div class="content">
+          <p>Welcome to the Brew Book! It is here where you can keep track of your brewing recipes. If you are a new user, please sign up via the button below. However if you are returning, please select "login".</p>
+          <br>
+
+          <a href="http://127.0.0.1:4200/signup">Sign Up</a>
+          <a href="http://127.0.0.1:4200/login">Login</a>
+        </div>
+
+      <%else%>
+        <p>Welcome <%=current_user.username%>!</p>
+        <br>
+        <p>To begin, click on "Create a new beer" in the navigation bar above. You can look at all of your beers by clicking on the "Your Beers" tab in the navigation bar.</p>
+        <br>
+        <p> To update or delete a beer, you just need to click on the specific on the "Your Beers" page. </p>
+      <%end%>
+    </div>
+</div>

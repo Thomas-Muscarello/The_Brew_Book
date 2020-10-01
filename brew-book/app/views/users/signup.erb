@@ -1,0 +1,14 @@
+<% if @errors %>
+<% @errors.each do |error| %>
+    <p style="color: red;"><%= error %></p>
+    <%end%>
+    <%end%>
+
+<h2> Fill out the following information to sign up! </h2>
+<form action="/signup" method="POST">
+    <input type="text" name="user[username]" value="<%=@user.username%>" placeholder="Your Username">
+    <input type="password" name="user[password]" value="" placeholder="Your Password">
+    <input type="email" name="user[email]" value="<%=@user.email%>" placeholder="Your Email">
+    <input type="integer" name="user[years_brewing]" value="<%=@user.years_brewing%>" placeholder="Years Brewing?">
+    <input type="Submit" value="Submit">
+    </form>

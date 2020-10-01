@@ -1,0 +1,38 @@
+<h1> Changing up a Beer?</h1>
+
+<form action="/beers/<%=@beer.id %>" method="post">
+    <input type="hidden" name="_method" value="PATCH">
+    
+
+    <label for= "beer_name">Beer Name: </label>
+    <input type="text" name="beer[beer_name]" value="<%= @beer.beer_name%>">
+
+    <label for= "malt">Malt Used: </label>
+    <input type="text" name="beer[malt_type]" value="<%= @beer.malt_type%>">
+
+    <label for= "malt_amount">Malt Amount: </label>
+    <input type="decimal" name="beer[malt_amount]" value="<%= @beer.malt_amount%>">
+
+    <label for= "hop">Hop Amount: </label>
+    <input type="text" name="beer[hop]" value="<%= @beer.hop%>">
+
+    <label for= "hop_amount">Hop Amount: </label>
+    <input type="decimal" name="beer[hop_amount]" value="<%= @beer.hop_amount%>">
+
+    <label for= "yeast">Yeast Used: </label>
+    <input type="decimal" name="beer[yeast]" value="<%= @beer.yeast%>">
+
+    <label for= "yeast_amount">Yeast Amount: </label>
+    <input type="decimal" name="beer[yeast_amount]" value="<%= @beer.yeast_amount%>">
+
+    <label for= "water_ph">Water pH: </label>
+    <input type="text" name="beer[water_ph]" value="<%= @beer.water_ph%>">
+    <input type="Submit" value="Update Beer">
+    </form>
+
+
+
+    <form action="/beers/<%=@beer.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="Submit" value="Delete">
+    </form>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <title>The Brew Book</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/main.css" />
+</head>
+<body>
+
+
+
+
+  <div class="wrapper">
+  <%= yield %>
+    <% if current_user %>
+      <nav>
+        <div class="left-nav">
+          <a href="/beers"> Your Beers </a>
+          <a href="/beers/new"> Create a New Beer </a>
+        </div>
+
+        <div class="right-nav">
+          <form action="/logout" method="post">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="Logout">
+          </form>
+        </div>
+      </nav>
+
+    <% end %>
+
+   
+
+    <footer class="branding">
+      <small>&copy; 2020 <strong>Brew Book</strong></small>
+    </footer>
+  </div>
+   
+</body>
+</html>

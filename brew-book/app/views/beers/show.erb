@@ -1,0 +1,10 @@
+    <p> Beer Name: <%= @beer.beer_name %> </p>
+    <p> Malt Used: <%= @beer.malt_type %> </p>
+    <p> Malt Amount in Pounds: <%= @beer.malt_amount %> </p>
+    <p> Hops Used: <%= @beer.hop %> </p>
+    <p> Hop Amount Used in Ounces: <%= @beer.hop_amount %> </p>
+    <p> Yeast Used: <%= @beer.yeast %> </p>
+    <p> Yeast Used in Ounces: <%= @beer.yeast_amount %> </p>
+    <p> Water pH: <%= @beer.water_ph %> </p>
+
+    <a href= "/beers/<%=@beer.id%>/edit">Edit Beer</a>
